@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Simbarashe M. Mazarire — IT Support Specialist &amp; Software Engineer</title>
+<meta name="description" content="Simbarashe Mazarire — IT Support Specialist and Software Engineer based in Harare, Zimbabwe, open to relocation across the Netherlands and Europe." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#11233D;
+    --ink-soft:#1B3357;
+    --paper:#FBFAF7;
+    --cloud:#F1F4F7;
+    --slate:#54616E;
+    --signal:#1F9D63;
+    --signal-soft:#E7F5ED;
+    --mist:#DEE5EA;
+    --max:1080px;
+    --radius:14px;
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  html,body{max-width:100%;overflow-x:hidden;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'IBM Plex Sans', sans-serif;
+    font-size:16px;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  [id]{
+    scroll-margin-top:84px;
+  }
+  h1,h2,h3,.display{
+    font-family:'Space Grotesk', sans-serif;
+    color:var(--ink);
+    margin:0;
+    letter-spacing:-0.01em;
+  }
+  .mono{
+    font-family:'IBM Plex Mono', monospace;
+  }
+  p{margin:0;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  ::selection{background:var(--signal-soft);}
+
+  a:focus-visible,
+  button:focus-visible,
+  .nav-link:focus-visible{
+    outline:2px solid var(--signal);
+    outline-offset:3px;
+    border-radius:4px;
+  }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px;
+  }
+
+  /* ---------- Nav ---------- */
+  .site-nav{
+    position:sticky;
+    top:0;
+    z-index:50;
+    background:rgba(251,250,247,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--mist);
+  }
+  .nav-inner{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:16px 24px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:24px;
+  }
+  .nav-name{
+    font-weight:600;
+    font-size:1rem;
+    white-space:nowrap;
+    text-decoration:none;
+  }
+  .nav-links{
+    display:flex;
+    gap:22px;
+    overflow-x:auto;
+    scrollbar-width:none;
+    -ms-overflow-style:none;
+  }
+  .nav-links::-webkit-scrollbar{display:none;}
+  .nav-link{
+    font-size:0.92rem;
+    color:var(--slate);
+    text-decoration:none;
+    white-space:nowrap;
+    padding:6px 2px;
+    border-bottom:2px solid transparent;
+    transition:color 0.15s ease, border-color 0.15s ease;
+  }
+  .nav-link:hover{color:var(--ink); border-bottom-color:var(--signal);}
+  .nav-cta{
+    flex-shrink:0;
+    display:inline-flex;
+    align-items:center;
+    gap:6px;
+    background:var(--ink);
+    color:var(--paper);
+    text-decoration:none;
+    font-size:0.88rem;
+    font-weight:500;
+    padding:9px 16px;
+    border-radius:999px;
+    white-space:nowrap;
+    transition:background 0.15s ease, transform 0.15s ease;
+  }
+  .nav-cta:hover{background:var(--ink-soft); transform:translateY(-1px);}
+
+  /* ---------- Status badge ---------- */
+  .status-badge{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:7px 14px 7px 10px;
+    background:var(--signal-soft);
+    border:1px solid #CDEBDB;
+    border-radius:999px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    font-weight:500;
+    color:#136B43;
+    letter-spacing:0.02em;
+  }
+  .status-dot{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:var(--signal);
+    box-shadow:0 0 0 0 rgba(31,157,99,0.5);
+    animation:pulse 2.4s infinite;
+  }
+  @keyframes pulse{
+    0%{box-shadow:0 0 0 0 rgba(31,157,99,0.45);}
+    70%{box-shadow:0 0 0 7px rgba(31,157,99,0);}
+    100%{box-shadow:0 0 0 0 rgba(31,157,99,0);}
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    padding:64px 0 56px;
+  }
+  .hero-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:48px;
+    align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2.1rem, 4.5vw, 3.2rem);
+    line-height:1.08;
+    margin:18px 0 10px;
+  }
+  .hero .role-line{
+    font-size:clamp(1.05rem, 2vw, 1.25rem);
+    color:var(--ink-soft);
+    font-weight:500;
+    margin-bottom:18px;
+  }
+  .hero .summary{
+    color:var(--slate);
+    font-size:1.04rem;
+    max-width:540px;
+    margin-bottom:22px;
+  }
+  .hero .location-line{
+    display:flex;
+    flex-wrap:wrap;
+    align-items:center;
+    gap:10px;
+    color:var(--slate);
+    font-size:0.95rem;
+    margin-bottom:30px;
+  }
+  .location-line .sep{color:var(--mist);}
+  .hero-actions{
+    display:flex;
+    gap:14px;
+    flex-wrap:wrap;
+  }
+  .btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:13px 22px;
+    border-radius:10px;
+    font-size:0.95rem;
+    font-weight:500;
+    text-decoration:none;
+    transition:transform 0.15s ease, background 0.15s ease, border-color 0.15s ease;
+  }
+  .btn-primary{
+    background:var(--ink);
+    color:var(--paper);
+  }
+  .btn-primary:hover{background:var(--ink-soft); transform:translateY(-1px);}
+  .btn-secondary{
+    background:transparent;
+    color:var(--ink);
+    border:1.5px solid var(--mist);
+  }
+  .btn-secondary:hover{border-color:var(--ink); transform:translateY(-1px);}
+
+  /* ---------- Hero journey graphic ---------- */
+  .journey-card{
+    background:var(--cloud);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:22px 22px 18px;
+  }
+  .journey-caption{
+    display:flex;
+    justify-content:space-between;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.72rem;
+    color:var(--slate);
+    margin-top:10px;
+    letter-spacing:0.02em;
+  }
+  .journey-path{
+    stroke-dasharray:6 6;
+    stroke-dashoffset:300;
+    animation:draw 1.8s ease-out forwards;
+    animation-delay:0.3s;
+  }
+  @keyframes draw{ to{ stroke-dashoffset:0; } }
+  .journey-plane{
+    transform-box:fill-box;
+    transform-origin:center;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .status-dot{animation:none;}
+    .journey-path{animation:none; stroke-dashoffset:0;}
+    *{scroll-behavior:auto !important;}
+  }
+
+  /* ---------- Section shells ---------- */
+  section{padding:64px 0;}
+  .section-alt{background:var(--cloud);}
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--signal);
+    margin-bottom:10px;
+    display:block;
+  }
+  .section-head{
+    margin-bottom:34px;
+    max-width:640px;
+  }
+  .section-head h2{
+    font-size:clamp(1.5rem, 3vw, 2rem);
+    margin-bottom:10px;
+  }
+  .section-head .sub{color:var(--slate); font-size:1rem;}
+
+  /* ---------- About ---------- */
+  .about-grid{
+    display:grid;
+    grid-template-columns:1.3fr 0.7fr;
+    gap:40px;
+    align-items:start;
+  }
+  .about-text p{color:var(--slate); font-size:1.02rem; margin-bottom:16px;}
+  .stat-list{
+    display:grid;
+    gap:16px;
+  }
+  .stat-card{
+    background:var(--cloud);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:16px 18px;
+  }
+  .stat-num{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:1.5rem;
+    font-weight:500;
+    color:var(--ink);
+    display:block;
+  }
+  .stat-label{font-size:0.85rem; color:var(--slate);}
+
+  /* ---------- Skills ---------- */
+  .skills-grid{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    gap:28px 40px;
+  }
+  .skill-group h3{
+    font-size:0.78rem;
+    font-family:'IBM Plex Mono', monospace;
+    text-transform:uppercase;
+    letter-spacing:0.05em;
+    color:var(--slate);
+    margin-bottom:12px;
+    font-weight:500;
+  }
+  .tag-row{display:flex; flex-wrap:wrap; gap:8px;}
+  .tag{
+    background:var(--paper);
+    border:1px solid var(--mist);
+    border-radius:999px;
+    padding:7px 13px;
+    font-size:0.86rem;
+    color:var(--ink-soft);
+  }
+  .section-alt .tag{background:var(--paper);}
+
+  /* ---------- Experience ---------- */
+  .exp-card{
+    background:var(--paper);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:30px 32px;
+  }
+  .exp-top{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-between;
+    gap:10px;
+    margin-bottom:6px;
+  }
+  .exp-role{font-size:1.15rem; font-weight:600; font-family:'Space Grotesk',sans-serif;}
+  .exp-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--slate);
+    white-space:nowrap;
+  }
+  .exp-org{color:var(--slate); margin-bottom:20px; font-size:0.96rem;}
+  .exp-list{
+    margin:0 0 22px;
+    padding:0;
+    list-style:none;
+    display:grid;
+    gap:11px;
+  }
+  .exp-list li{
+    position:relative;
+    padding-left:18px;
+    color:var(--ink-soft);
+    font-size:0.96rem;
+  }
+  .exp-list li::before{
+    content:"";
+    position:absolute;
+    left:0;
+    top:0.55em;
+    width:6px;
+    height:6px;
+    border-radius:50%;
+    background:var(--signal);
+  }
+  .exp-stats{
+    display:flex;
+    flex-wrap:wrap;
+    gap:10px;
+  }
+  .exp-stat{
+    background:var(--signal-soft);
+    color:#136B43;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    padding:6px 12px;
+    border-radius:999px;
+    border:1px solid #CDEBDB;
+  }
+
+  /* ---------- Projects ---------- */
+  .project-card{
+    background:var(--paper);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:30px 32px;
+  }
+  .project-top{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:14px;
+    margin-bottom:8px;
+  }
+  .project-title{font-size:1.2rem; font-weight:600;}
+  .project-status{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.74rem;
+    color:var(--slate);
+    border:1px solid var(--mist);
+    padding:5px 10px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .project-link{
+    font-size:0.88rem;
+    color:var(--signal);
+    text-decoration:none;
+    font-family:'IBM Plex Mono', monospace;
+  }
+  .project-link:hover{text-decoration:underline;}
+  .project-desc{color:var(--slate); margin:14px 0 18px; font-size:0.98rem;}
+  .project-goal{
+    background:var(--signal-soft);
+    border-left:3px solid var(--signal);
+    border-radius:8px;
+    padding:13px 16px;
+    font-size:0.92rem;
+    color:#0F4A30;
+    margin-top:18px;
+  }
+
+  /* ---------- Education ---------- */
+  .edu-grid{display:grid; gap:14px;}
+  .edu-card{
+    display:flex;
+    justify-content:space-between;
+    align-items:baseline;
+    gap:20px;
+    flex-wrap:wrap;
+    background:var(--cloud);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:20px 24px;
+  }
+  .edu-title{font-weight:600; font-size:1rem;}
+  .edu-school{color:var(--slate); font-size:0.92rem; margin-top:3px;}
+  .edu-dates{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.82rem;
+    color:var(--slate);
+    white-space:nowrap;
+  }
+
+  /* ---------- Languages ---------- */
+  .lang-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+  }
+  .lang-card{
+    background:var(--paper);
+    border:1px solid var(--mist);
+    border-radius:var(--radius);
+    padding:18px 20px;
+  }
+  .lang-name{font-weight:600; font-size:1rem; margin-bottom:4px;}
+  .lang-level{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:0.78rem;
+    color:var(--signal);
+  }
+
+  /* ---------- Contact / Footer ---------- */
+  .contact{
+    text-align:center;
+    padding:72px 0 40px;
+  }
+  .contact h2{
+    font-size:clamp(1.7rem, 4vw, 2.4rem);
+    margin-bottom:14px;
+  }
+  .contact .sub{
+    color:var(--slate);
+    max-width:480px;
+    margin:0 auto 30px;
+  }
+  .contact-actions{
+    display:flex;
+    justify-content:center;
+    gap:14px;
+    flex-wrap:wrap;
+    margin-bottom:36px;
+  }
+  .contact-direct{
+    display:flex;
+    justify-content:center;
+    gap:26px;
+    flex-wrap:wrap;
+    font-size:0.92rem;
+    color:var(--slate);
+  }
+  .contact-direct a{text-decoration:none; color:var(--ink-soft);}
+  .contact-direct a:hover{color:var(--signal);}
+  footer{
+    border-top:1px solid var(--mist);
+    padding:24px 0;
+    text-align:center;
+    font-size:0.82rem;
+    color:var(--slate);
+  }
+
+  /* ---------- Responsive ---------- */
+  /* Large desktop: a touch more breathing room */
+  @media (min-width:1400px){
+    .wrap{max-width:1180px;}
+  }
+
+  /* Laptop / small desktop */
+  @media (max-width:1024px){
+    .hero-grid{gap:32px;}
+    .about-grid{gap:30px;}
+  }
+
+  /* Tablets (portrait) */
+  @media (max-width:860px){
+    .hero-grid{grid-template-columns:1fr; gap:36px;}
+    .journey-card{order:-1; max-width:420px;}
+    .about-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr;}
+    .lang-grid{grid-template-columns:1fr;}
+  }
+
+  /* Large phones / small tablets */
+  @media (max-width:600px){
+    .wrap{padding:0 18px;}
+    .nav-inner{padding:14px 18px; gap:14px;}
+    .nav-links{gap:16px;}
+    .nav-cta{display:none;}
+    .exp-card,.project-card{padding:24px 20px;}
+    .hero{padding:44px 0 40px;}
+    section{padding:48px 0;}
+    .contact-direct{flex-direction:column; gap:10px;}
+  }
+
+  /* Small phones */
+  @media (max-width:400px){
+    .nav-name{font-size:0.92rem;}
+    .nav-link{font-size:0.84rem;}
+    .status-badge{font-size:0.7rem; padding:6px 10px 6px 8px;}
+    .hero h1{font-size:1.75rem;}
+    .hero-actions,.contact-actions{flex-direction:column; align-items:stretch;}
+    .btn{justify-content:center;}
+    .exp-top,.project-top{flex-direction:column; align-items:flex-start; gap:8px;}
+    .edu-card{flex-direction:column; align-items:flex-start; gap:6px;}
+    .stat-num{font-size:1.3rem;}
+  }
+</style>
+</head>
+<body>
+
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="#top" class="nav-name display">Simbarashe Mazarire</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#contact">Contact</a>
+    </div>
+    <a class="nav-cta" href="#contact">Let's connect</a>
+  </div>
+</nav>
+
+<header id="top" class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="status-badge"><span class="status-dot" aria-hidden="true"></span>Available now · open to relocation</span>
+      <h1>Simbarashe M. Mazarire</h1>
+      <p class="role-line">IT Support Specialist &amp; Software Engineer</p>
+      <p class="summary">I keep IT systems running and build the software that runs on them — from first-line support and hardware deployment to full-stack web applications in Java, Python, and JavaScript.</p>
+      <p class="location-line">
+        <span>📍 Harare, Zimbabwe</span>
+        <span class="sep">·</span>
+        <span>🌍 Open to the Netherlands &amp; Europe</span>
+        <span class="sep">·</span>
+        <span>English (C1) &amp; Shona</span>
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="mailto:simbarashemazarire200211@gmail.com">Email me</a>
+        <a class="btn btn-secondary" href="https://linkedin.com/in/cymple" target="_blank" rel="noopener">Connect on LinkedIn</a>
+      </div>
+    </div>
+
+    <div class="journey-card">
+      <svg viewBox="0 0 320 220" width="100%" role="img" aria-label="Illustration of a relocation path from Harare, Zimbabwe to Bulawayo, Zimbabwe">
+        <defs>
+          <marker id="dot" markerWidth="8" markerHeight="8" refX="4" refY="4">
+            <circle cx="4" cy="4" r="4" fill="#1F9D63"/>
+          </marker>
+        </defs>
+        <path class="journey-path" d="M 46 168 C 90 90, 190 60, 268 46" fill="none" stroke="#1F9D63" stroke-width="2" stroke-linecap="round"/>
+        <g class="journey-plane">
+          <circle cx="268" cy="46" r="0" fill="none"/>
+          <path d="M268 46 l8 -4 l-3 8 l-5 -1 z" fill="#11233D" transform="rotate(20 268 46)"/>
+        </g>
+        <circle cx="46" cy="168" r="6" fill="#11233D"/>
+        <circle cx="46" cy="168" r="11" fill="none" stroke="#11233D" stroke-opacity="0.25"/>
+        <circle cx="268" cy="46" r="6" fill="#1F9D63"/>
+        <circle cx="268" cy="46" r="11" fill="none" stroke="#1F9D63" stroke-opacity="0.3"/>
+        <text x="20" y="194" font-family="IBM Plex Mono, monospace" font-size="11" fill="#54616E">Harare</text>
+        <text x="222" y="32" font-family="IBM Plex Mono, monospace" font-size="11" fill="#136B43">Bulawayo</text>
+      </svg>
+      <div class="journey-caption">
+        <span>BASE: ZIMBABWE</span>
+        <span>STATUS: RELOCATION-READY</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap about-grid">
+    <div class="about-text">
+      <span class="eyebrow">About</span>
+      <h2 style="margin-bottom:18px;">A support specialist's instincts, an engineer's toolkit</h2>
+      <p>I started in IT support — diagnosing hardware faults, deploying workstations, keeping a 150-person office running — and that's shaped how I build software: I care about reliability, clear documentation, and the person on the other end of the ticket. Today I split my time between hands-on enterprise support and full-stack development, building production-grade web applications with Java, Python, and modern JavaScript.</p>
+      <p>I'm comfortable in multicultural, fast-moving environments, and I'm currently looking for my next role abroad — ideally in the Netherlands or elsewhere in Europe.</p>
+    </div>
+    <div class="stat-list">
+      <div class="stat-card">
+        <span class="stat-num">95%</span>
+        <span class="stat-label">of support tickets resolved within SLA</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">40+</span>
+        <span class="stat-label">devices deployed &amp; configured</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num">C1</span>
+        <span class="stat-label">professional English, native Shona</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="skills" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Skills</span>
+      <h2>What I work with</h2>
+      <p class="sub">From the help desk to the codebase — grouped by where I use it.</p>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3>Languages</h3>
+        <div class="tag-row">
+          <span class="tag">Java</span><span class="tag">Python</span><span class="tag">JavaScript</span><span class="tag">TypeScript</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Frontend</h3>
+        <div class="tag-row">
+          <span class="tag">React.js</span><span class="tag">Tailwind CSS</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Backend</h3>
+        <div class="tag-row">
+          <span class="tag">Spring Boot</span><span class="tag">Django</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Database</h3>
+        <div class="tag-row">
+          <span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Auth &amp; Security</h3>
+        <div class="tag-row">
+          <span class="tag">JWT Authentication</span><span class="tag">Role-Based Access Control</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Version Control</h3>
+        <div class="tag-row">
+          <span class="tag">Git</span><span class="tag">GitHub</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>IT Support</h3>
+        <div class="tag-row">
+          <span class="tag">Help Desk</span><span class="tag">Desktop Support</span><span class="tag">Windows Install &amp; Config</span><span class="tag">Hardware Troubleshooting</span><span class="tag">Printer Setup</span><span class="tag">Workstation Deployment</span><span class="tag">Asset Management</span><span class="tag">Network Troubleshooting</span><span class="tag">Technical Documentation</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <h3>Productivity &amp; Soft Skills</h3>
+        <div class="tag-row">
+          <span class="tag">Excel</span><span class="tag">Word</span><span class="tag">PowerPoint</span><span class="tag">Access</span><span class="tag">Problem Solving</span><span class="tag">Customer Service</span><span class="tag">Team Collaboration</span><span class="tag">Time Management</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="experience">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Experience</span>
+      <h2>Where I've put this to work</h2>
+    </div>
+    <div class="exp-card">
+      <div class="exp-top">
+        <span class="exp-role">IT Intern / IT Support Assistant</span>
+        <span class="exp-dates mono">2023 — 2024</span>
+      </div>
+      <p class="exp-org">National Railways of Zimbabwe</p>
+      <ul class="exp-list">
+        <li>Delivered first-line IT support to 150+ employees, resolving the large majority of tickets within SLA targets.</li>
+        <li>Installed, configured, and deployed desktops, laptops, printers, and peripherals across the organisation.</li>
+        <li>Standardised Windows OS installations and software deployments, cutting setup time significantly.</li>
+        <li>Diagnosed and resolved hardware and software faults, bringing average downtime from 4 hours to under 1.</li>
+        <li>Configured new machines to IT security policy, including domain joining and group policy.</li>
+        <li>Carried out RAM upgrades and preventive maintenance to improve fleet-wide performance.</li>
+        <li>Managed printer installation and troubleshooting across three office floors.</li>
+        <li>Assisted with network troubleshooting — cable testing, switch connectivity, and IP configuration.</li>
+        <li>Maintained the hardware asset register and lifecycle records for the organisation's IT equipment.</li>
+        <li>Worked alongside senior IT staff on infrastructure projects and technical documentation.</li>
+      </ul>
+      <div class="exp-stats">
+        <span class="exp-stat">95% SLA compliance</span>
+        <span class="exp-stat">40+ devices deployed</span>
+        <span class="exp-stat">30% faster setup</span>
+        <span class="exp-stat">99% printer uptime</span>
+        <span class="exp-stat">200+ assets tracked</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="projects" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Projects</span>
+      <h2>What I'm building</h2>
+    </div>
+    <div class="project-card">
+      <div class="project-top">
+        <div>
+          <span class="project-title">LexCore — Legal Compliance Automation Platform</span>
+          <div style="margin-top:4px;"><a class="project-link" href="https://github.com/cymple/lexcore" target="_blank" rel="noopener">github.com/cymple/lexcore →</a></div>
+        </div>
+        <span class="project-status">In development</span>
+      </div>
+      <p class="project-desc">A platform that automates legal document workflows, compliance tracking, and access control for law firms — built with Java, Spring Boot, PostgreSQL, JWT, and a React/Tailwind front end. Core features include multi-tenant user management, audit logging, and real-time deadline notifications.</p>
+      <div class="tag-row" style="margin-bottom:4px;">
+        <span class="tag">Java</span><span class="tag">Spring Boot</span><span class="tag">PostgreSQL</span><span class="tag">JWT</span><span class="tag">RBAC</span><span class="tag">React.js</span><span class="tag">Tailwind CSS</span>
+      </div>
+      <p class="project-goal">Goal: reduce the manual effort of compliance tracking by roughly 60% once released.</p>
+    </div>
+  </div>
+</section>
+
+<section id="education">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Education</span>
+      <h2>Where it started</h2>
+    </div>
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div>
+          <div class="edu-title">National Diploma in Information Technology</div>
+          <div class="edu-school">Kwekwe Polytechnic, Zimbabwe</div>
+        </div>
+        <span class="edu-dates">2024 — Present</span>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-title">National Certificate in Information Technology</div>
+          <div class="edu-school">Kwekwe Polytechnic, Zimbabwe</div>
+        </div>
+        <span class="edu-dates">2022 — 2023</span>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-title">National Foundation Certificate in Computer Operations &amp; Packages</div>
+          <div class="edu-school">Muzondo High School, Zimbabwe</div>
+        </div>
+        <span class="edu-dates">2018 — 2019</span>
+      </div>
+      <div class="edu-card">
+        <div>
+          <div class="edu-title">O'Level Certificate (ZIMSEC) — 6 subjects passed</div>
+          <div class="edu-school">Muzondo High School, Zimbabwe</div>
+        </div>
+        <span class="edu-dates">2019</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="languages" class="section-alt">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Languages</span>
+      <h2>How we can talk</h2>
+    </div>
+    <div class="lang-grid">
+      <div class="lang-card">
+        <div class="lang-name">English</div>
+        <div class="lang-level">PROFESSIONAL — C1</div>
+      </div>
+      <div class="lang-card">
+        <div class="lang-name">Shona</div>
+        <div class="lang-level">NATIVE</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact">
+  <div class="wrap">
+    <span class="status-badge" style="margin-bottom:18px;"><span class="status-dot" aria-hidden="true"></span>Available now · open to relocation</span>
+    <h2>Let's connect</h2>
+    <p class="sub">Hiring for an IT support or software engineering role — or just want to talk shop? I'd love to hear from you.</p>
+    <div class="contact-actions">
+      <a class="btn btn-primary" href="mailto:simbarashemazarire200211@gmail.com">Email me</a>
+      <a class="btn btn-secondary" href="https://linkedin.com/in/cymple" target="_blank" rel="noopener">Connect on LinkedIn</a>
+    </div>
+    <div class="contact-direct">
+      <a href="mailto:simbarashemazarire200211@gmail.com">simbarashemazarire200211@gmail.com</a>
+      <a href="tel:+263783714511">+263 78 371 4511</a>
+      <a href="https://linkedin.com/in/cymple" target="_blank" rel="noopener">linkedin.com/in/cymple</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">© 2026 Simbarashe M. Mazarire · Built with care, from Harare.</div>
+</footer>
+
+</body>
+</html>
